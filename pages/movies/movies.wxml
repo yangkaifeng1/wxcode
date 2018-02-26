@@ -1,0 +1,18 @@
+<import src="movie-list/movie-list" />
+<import src="movie-grid/movie-grid" />
+
+<view class="search">
+  <icon type="search" class="icon-img" color="#c2185b" size="18"></icon>
+  <input placeholder="血戰鋼鋸崚" bindfocus="onInputFocus" bindconfirm="onInputConfirm"></input>
+  <icon type="clear" class="icon-img" color="#c2185b"  size="18" wx:if="{{templateShow}}" bindtap="onCancleTap"></icon>
+</view>
+<view class="container" wx:if="{{!templateShow}}">
+  <view>
+    <template is="movielistTemplate" data="{{...in_theaters}}"/>
+    <template is="movielistTemplate" data="{{...coming_soon}}"/>
+    <template is="movielistTemplate" data="{{...top250}}"/>  
+  </view>
+</view>
+<view wx:if="{{templateShow}}">
+  <template is="movieGridTemplate" data="{{...search}}"></template>  
+</view>

@@ -1,0 +1,17 @@
+<template name="post-item">
+	<view class="post-container">
+		<view class="post-author-date">
+			<image class="post-author" src="{{author_img}}"></image>
+			<text class="post-date">{{author_date}}</text>
+		</view>
+		<text class="title">{{title}}</text>
+		<image class="post-image" src="{{post_image}}" mode="widthFix" lazy-load="{{true}}"></image>
+		<text class="post-desc">{{post_desc}}</text>
+		<view class="post-like">
+			<image class="like-icon" src="/image/icon/chat.png"></image>
+			<text class="like-num">{{like_view}}</text>
+			<image class="like-icon" src="/image/icon/view.png"></image>
+			<text class="like-num">{{like_contact}}</text>
+		</view>
+	</view>
+</template>

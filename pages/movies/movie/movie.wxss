@@ -1,0 +1,22 @@
+@import "../star/star"
+
+.movie-container{
+   display: flex; 
+  flex-direction: column;
+  padding: 0 22rpx;
+  margin-top: 30rpx;
+}
+
+.movie-image{
+  width: 200rpx;
+  height: 270rpx;
+  padding-bottom: 20rpx;
+}
+
+.movie-title{
+  width: 180rpx;
+  margin-bottom: 16rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
